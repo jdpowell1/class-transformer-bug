@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { Cat } from './owner.entity';
+import { Owner } from './owner.entity';
 import { InjectModel } from '@nestjs/sequelize';
 
 @Injectable()
-export class CatsService {
+export class OwnerService {
   constructor(
-    @InjectModel(Cat)
-    private catModel: typeof Cat,
+    @InjectModel(Owner)
+    private ownerModel: typeof Owner,
   ) {}
 
-  async findAll(): Promise<Cat[]> {
-    return this.catModel.findAll<Cat>();
+  async findAll(): Promise<Owner[]> {
+    return this.ownerModel.findAll<Owner>();
   }
 }

@@ -1,13 +1,13 @@
 import { Controller, Get } from '@nestjs/common';
-import { CatsService } from './cats.service';
-import { Cat } from './owner.entity';
+import { OwnerService } from './owner.service';
+import { Owner } from './owner.entity';
 
-@Controller('/cats')
-export class CatsController {
-  constructor(private readonly catsService: CatsService) {}
+@Controller('/owners')
+export class OwnerController {
+  constructor(private readonly ownersService: OwnerService) {}
 
   @Get()
-  getCats(): Promise<Cat[]> {
-    return this.catsService.findAll();
+  getOwners(): Promise<Owner[]> {
+    return this.ownersService.findAll();
   }
 }

@@ -1,4 +1,10 @@
-import { Table, Column, Model, HasOne } from 'sequelize-typescript';
+import {
+  Table,
+  Column,
+  Model,
+  BelongsTo,
+  ForeignKey,
+} from 'sequelize-typescript';
 import { Owner } from '../owners/owner.entity';
 
 @Table
@@ -12,6 +18,9 @@ export class Cat extends Model {
   @Column
   breed: string;
 
-  @HasOne(() => Owner)
+  @BelongsTo(() => Owner)
   Owner: Owner;
+
+  @ForeignKey(() => Owner)
+  OwnerId: number;
 }

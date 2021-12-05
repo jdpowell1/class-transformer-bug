@@ -5,7 +5,7 @@ import {
   BelongsTo,
   ForeignKey,
 } from 'sequelize-typescript';
-import { Owner } from '../owners/owner.entity';
+import { Owner } from '../owner/owner.entity';
 
 @Table
 export class Cat extends Model {

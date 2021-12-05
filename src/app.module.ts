@@ -4,8 +4,8 @@ import { AppService } from './app.service';
 import { CatModule } from './cat/cat.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Cat } from './cat/cat.entity';
-import { Owner } from './owners/owner.entity';
-import { OwnerModule } from './owners/owner.module';
+import { Owner } from './owner/owner.entity';
+import { OwnerModule } from './owner/owner.module';
 
 @Module({
   imports: [

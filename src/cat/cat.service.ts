@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Cat } from './cat.entity';
 import { InjectModel } from '@nestjs/sequelize';
-import { Owner } from '../owners/owner.entity';
+import { Owner } from '../owner/owner.entity';
 
 @Injectable()
 export class CatService {

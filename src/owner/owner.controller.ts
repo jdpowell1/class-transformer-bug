@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { OwnerService } from './owner.service';
 import { Owner } from './owner.entity';
 
-@Controller('/owners')
+@Controller('/owner')
 export class OwnerController {
   constructor(private readonly ownersService: OwnerService) {}
 
